@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww11160\viewh8880\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 README\
+\
+Nick Golini\
+\
+Maze World - does not include any code for blind maze, just for multi robot maze\
+\
+To run the code, open up MazeWorldDriver and insert the starting coordinates you want the robots to start in, and the goal coordinates you want the robots to find, in starts[] and goals[] respectively. If you want only one robot, just use one set of coordinates, if you want two robots, use 2 sets of coordinates, and if you want 3 robots, insert 3 coordinates into the goals and starts arrays. \
+\
+In the MazeProblem object call, the first two arguments are the number of rows and columns in the maze, and the third argument is the maze file name (ATTN this may or may not be working -> may have to use the hardcoded maze, called mazeHard). \
+\
+Then call the MultiRobot object with the starts and goals arrays as the first two arguments, the number of rows and columns as the next two arguments, then the number of robots you want to search with, and then pass in the world (the maze representation with (0,0) being the bottom left corner of the maze). botTest.Driver will take care of the rest of the solution. \
+\
+To change any variables, do it in lines 7-11, rather than in the function calls themselves\
+\
+The solution is in the form of screenshots of the maze (from print statements) after each of the robots makes a move in the console of the Java IDE. The last maze representation should be the maze with the robots at their goals. \
+\
+This may not run with non-square mazes. I unfortunately forgot to check if my logic can handle non-square mazes until it was too late to go back and change it.  \
+}

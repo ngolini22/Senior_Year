@@ -1,0 +1,33 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 README\
+\
+There are four files in this project, Robot, Draw, RobotCar, DrawCar. Robot and Draw run together, and RobotCar and DrawCar are run together. \
+\
+ROBOT (robot arm): \
+\
+This is the code for the robot arm motion planner. The default is a 2R arm. The arm\'92s starting locations are created in the Robot main function. The goal state is created in the function generateGoal. If you want to run this with a 3R arm, uncomment the top commented angle in the main method and generateGoal method, and if you want to run a 4R arm, uncomment both of the angles in both of those functions. To make an obstacle, add an x, y coordinate to obstacles in the makeObstacles function. \
+\
+To change the number of random samples, change N at the beginning of the Robot class. The default for N is 1000. To change k, change it within the Robot class constructor. The default for k is 20. \
+\
+That is all the customization you need for running my mobile arm robot. The diagram is called after all of the computations are complete, which calls the Draw class, which draws the obstacles, path of robot arm, and every other bot arm along the path. \
+\
+Here if you would like to look at the random node sampling, uncomment the for loop between lines 90-93 in Draw. If you would like to see the k-nearest neighborhood of the system, uncomment the for loop between lines 95-106 in Draw. \
+\
+** note this may take up to 3 minutes to run. Please be patient with it, I did not get a chance to make it run faster than brute force. Do not use an N > 1000 and k > 20. \
+\
+ROBOT CAR (mobile robot):\
+\
+This is the code for the mobile robot. There is not a whole lot you can customize about this. The code starts with the initialization of a RobotCar in the RobotCar main method. You can add walls in the createObstacles method. The walls are just represented by Java Line2Ds, so adding or taking them out is easy. The default is similar to the world as in the figures in my report, minus a few of the tricky walls. They are just thrown in there for the interesting examples part of the write up to show that my RRT can handle more complicated systems. These extra walls really slow down the code, so I am taking them out for the default world. uncomment the addition of the walls to obstacles if you want them in the world. \
+\
+There are also print statements showing if there are collisions. There are definitely not necessary, but they are proof that the code is still running and the RRT is growing. If they are annoying you, uncomment the print statements in the collision function. \
+\
+** note this code runs between 1-2 minutes, and possibly longer with more walls. \
+\
+\
+}
