@@ -1,0 +1,26 @@
+README FOR CSP PROBLEM
+
+Default settings:
+    - running map CSP
+    - no heuristics
+    - MAC3 is implemented
+
+Running Map coloring CSP -> to change, uncomment line 8 and 9 in CSPDriver.java, and comment out lines 10 and 11
+    - this will simply call the Circuit Board CSP instead of the map coloring CSP
+
+
+To use heuristics:
+    - Assign DH = 1 in CSP.java line 24 to use degree heuristic
+    - Assign MRV = 1 in CSP.java line 25 to use Min Remaining Value Heuristic
+    - Only assign one of them to 1 -> default if both are 1 is MRV
+    - DH -> working for everything except for circuit-board problem with MAC3 inferences running
+        - not sure why this is happening, I didn't have enough time to find this bug
+
+To turn off MAC3:
+    - Comment out lines 171-173 in CSP.java
+
+Notes to reader:
+    - The code has a bunch of commented out print statements used for debugging. Please ignore.
+    - The output for the problems include all of the attemped assignment values. This is useful to the reader in
+      following the course of the problem, and is especially useful in seeing how the heuristics and inferences affect
+      the problem
