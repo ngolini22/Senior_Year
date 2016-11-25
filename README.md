@@ -6,6 +6,6 @@ The projects inside Senior_Year include my classwork from senior year.
 Artificial Intelligence includes: 
   - Cannibals and Missionaries solver
   - Chess AI
-  = Maze World Solution
+  - Maze World Solution
   - CSP - constraint satisfaction problem solver
   - Robot Motion Planner
