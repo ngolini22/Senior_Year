@@ -9,3 +9,5 @@ Artificial Intelligence includes:
   - Maze World Solution
   - CSP - constraint satisfaction problem solver
   - Robot Motion Planner
+
+Each project includes an in-depth report of the assignment and solution. They also include individual READMEs describing how to run each project.  
